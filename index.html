@@ -88,6 +88,7 @@
             <li><a href="#hobbies">My Hobbies</a></li>
             <li><a href="#favorites">Favorite Websites</a></li>
             <li><a href="#image">My Favorite Image</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
     
@@ -114,17 +115,36 @@
     <h2 id="image">My Favorite Image</h2>
     <img src="12.PNG" alt="Husky Logo">
 
-    <h2>Interactive Button</h2>
-    <button id="alertButton">Click Me!</button>
+    <h2 id="contact">Contact Me</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
 
     <script>
-        // Function to display an alert message
-        function showAlert() {
-            alert("Hello! Welcome to my personal website.");
-        }
+        // Function to handle form submission
+        document.getElementById("contactForm").onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-        // Attach the function to the button click event
-        document.getElementById("alertButton").onclick = showAlert;
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Display an alert with the submitted information
+            alert(`Thank you, ${name}! Your message has been received.\nEmail: ${email}\nMessage: ${message}`);
+            
+            // Optionally, reset the form
+            this.reset();
+        };
     </script>
 </body>
 </html>
