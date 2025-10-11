@@ -112,6 +112,19 @@
     </ol>
     
     <h2 id="image">My Favorite Image</h2>
-<img src="https://github.com/GeraldBSDC260/.github.io/blob/main/12.PNG" alt="Husky Logo">
+    <img src="12.PNG" alt="Husky Logo">
+
+    <h2>Interactive Button</h2>
+    <button id="alertButton">Click Me!</button>
+
+    <script>
+        // Function to display an alert message
+        function showAlert() {
+            alert("Hello! Welcome to my personal website.");
+        }
+
+        // Attach the function to the button click event
+        document.getElementById("alertButton").onclick = showAlert;
+    </script>
 </body>
 </html>
