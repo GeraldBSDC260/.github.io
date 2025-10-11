@@ -78,6 +78,38 @@
             color: white; /* White text for the footer */
         }
 
+        /* Flexbox Styles */
+        .skills-container {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-around; /* Space items evenly */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            margin: 20px 0; /* Margin around the container */
+        }
+
+        .skill {
+            background-color: lightblue; /* Background color for skills */
+            padding: 10px; /* Padding inside each skill box */
+            margin: 5px; /* Margin between skill boxes */
+            border-radius: 5px; /* Rounded corners */
+            flex: 1 1 150px; /* Flex-grow, flex-shrink, and flex-basis */
+            text-align: center; /* Center text */
+        }
+
+        /* Grid Styles */
+        .projects-container {
+            display: grid; /* Enable Grid Layout */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 10px; /* Space between grid items */
+            margin: 20px 0; /* Margin around the container */
+        }
+
+        .project {
+            background-color: yellow; /* Background color for projects */
+            padding: 20px; /* Padding inside each project box */
+            text-align: center; /* Center text */
+            border-radius: 5px; /* Rounded corners */
+        }
+
         /* Media Queries for Responsive Design */
         @media (max-width: 600px) {
             body {
@@ -122,11 +154,62 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to get in touch, feel free to reach out!</p>
+            <form id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Gerald Blackwell. All rights reserved.</p>
+        <p>&copy; 2023 Gerald Blackwell. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor click behavior
+
+                const targetId = this.getAttribute('href'); // Get the target section ID
+                const targetSection = document.querySelector(targetId); // Select the target section
+
+                // Scroll to the target section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            });
+        });
+
+        // Function to handle form submission
+        document.getElementById("contactForm").onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            // Basic validation
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Display an alert with the submitted information
+            alert(`Thank you, ${name}! Your message has been received.\nEmail: ${email}\nMessage: ${message}`);
+            
+            // Optionally, reset the form
+            this.reset();
+        };
+    </script>
 </body>
 </html>
