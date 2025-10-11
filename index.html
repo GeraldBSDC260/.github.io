@@ -64,6 +64,38 @@
             text-decoration: underline; /* Underline on hover */
         }
 
+        /* Flexbox Styles */
+        .skills-container {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-around; /* Space items evenly */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            margin: 20px 0; /* Margin around the container */
+        }
+
+        .skill {
+            background-color: lightblue; /* Background color for skills */
+            padding: 10px; /* Padding inside each skill box */
+            margin: 5px; /* Margin between skill boxes */
+            border-radius: 5px; /* Rounded corners */
+            flex: 1 1 150px; /* Flex-grow, flex-shrink, and flex-basis */
+            text-align: center; /* Center text */
+        }
+
+        /* Grid Styles */
+        .projects-container {
+            display: grid; /* Enable Grid Layout */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 10px; /* Space between grid items */
+            margin: 20px 0; /* Margin around the container */
+        }
+
+        .project {
+            background-color: yellow; /* Background color for projects */
+            padding: 20px; /* Padding inside each project box */
+            text-align: center; /* Center text */
+            border-radius: 5px; /* Rounded corners */
+        }
+
         /* Media Queries for Responsive Design */
         @media (max-width: 600px) {
             body {
@@ -89,6 +121,8 @@
             <li><a href="#favorites">Favorite Websites</a></li>
             <li><a href="#image">My Favorite Image</a></li>
             <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
     </nav>
     
@@ -128,6 +162,22 @@
         
         <button type="submit">Submit</button>
     </form>
+
+    <h2 id="skills">My Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+    </div>
+
+    <h2 id="projects">Projects</h2>
+    <div class="projects-container">
+        <div class="project">Project 1</div>
+        <div class="project">Project 2</div>
+        <div class="project">Project 3</div>
+        <div class="project">Project 4</div>
+    </div>
 
     <script>
         // Function to handle form submission
