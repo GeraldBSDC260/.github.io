@@ -19,8 +19,10 @@ body {
 header {
     background-color: #4CAF50; /* Green background for header */
     color: white; /* White text color */
-    padding: 10px 0; /* Padding for header */
+    padding: 20px; /* Increased padding for header */
     text-align: center; /* Center the text */
+    font-size: 2em; /* Change font size */
+    font-weight: bold; /* Make the font bold */
 }
 
 /* Style the main sections */
