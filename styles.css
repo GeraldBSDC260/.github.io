@@ -55,6 +55,16 @@ main {
     margin-top: 20px; /* Space above the main content */
 }
 
+/* Style individual sections */
+section {
+    background-color: white; /* White background for sections */
+    border: 1px solid #ccc; /* Light gray border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside sections */
+    margin: 20px 0; /* Margin above and below sections */
+    border-radius: 5px; /* Rounded corners */
+}
+
 /* Style the footer */
 footer {
     text-align: center; /* Center the footer text */
