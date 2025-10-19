@@ -25,6 +25,31 @@ header {
     font-weight: bold; /* Make the font bold */
 }
 
+/* Navigation menu styles */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+nav ul li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding around links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for links */
+nav ul li a:hover {
+    background-color: #45a049; /* Darker green on hover */
+    color: white; /* Keep text color white on hover */
+}
+
 /* Style the main sections */
 main {
     margin-top: 20px; /* Space above the main content */
