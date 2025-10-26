@@ -3,237 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerald Blackwell's Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black; /* Black background */
-            color: white; /* White text for better contrast */
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: yellow; /* Yellow color for main heading */
-            text-align: center; /* Center the main heading */
-        }
-        h2 {
-            color: lightblue; /* Light blue color for subheadings */
-        }
-        p {
-            line-height: 1.6;
-        }
-        ul, ol {
-            margin: 20px 0;
-        }
-        a {
-            color: blue; /* Change link color to blue */
-            text-decoration: none; /* Remove underline from links */
-        }
-        a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-        img {
-            border: 2px solid lightblue; /* Light blue border for images */
-            border-radius: 5px;
-            width: 100%; /* Make images responsive */
-            height: auto; /* Maintain aspect ratio */
-        }
-        
-        /* Navigation Styles */
-        nav {
-            background-color: #333; /* Dark background for the nav */
-            padding: 10px; /* Padding around the nav */
-        }
-
-        nav ul {
-            list-style-type: none; /* Remove bullet points */
-            padding: 0; /* Remove default padding */
-        }
-
-        nav ul li {
-            display: inline; /* Display items in a line */
-            margin-right: 20px; /* Space between items */
-        }
-
-        nav a {
-            color: white; /* White text for links */
-            text-decoration: none; /* Remove underline */
-        }
-
-        nav a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Main Section Styles */
-        main {
-            margin: 20px 0; /* Margin around the main section */
-        }
-
-        /* Footer Styles */
-        footer {
-            text-align: center; /* Center the footer text */
-            margin-top: 20px; /* Margin above the footer */
-            padding: 10px; /* Padding inside the footer */
-            background-color: #333; /* Dark background for the footer */
-            color: white; /* White text for the footer */
-        }
-
-        /* Flexbox Styles */
-        .skills-container {
-            display: flex; /* Enable Flexbox */
-            justify-content: space-around; /* Space items evenly */
-            flex-wrap: wrap; /* Allow items to wrap to the next line */
-            margin: 20px 0; /* Margin around the container */
-        }
-
-        .skill {
-            background-color: lightblue; /* Background color for skills */
-            padding: 10px; /* Padding inside each skill box */
-            margin: 5px; /* Margin between skill boxes */
-            border-radius: 5px; /* Rounded corners */
-            flex: 1 1 150px; /* Flex-grow, flex-shrink, and flex-basis */
-            text-align: center; /* Center text */
-        }
-
-        /* Grid Styles */
-        .projects-container {
-            display: grid; /* Enable Grid Layout */
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
-            gap: 10px; /* Space between grid items */
-            margin: 20px 0; /* Margin around the container */
-        }
-
-        .project {
-            background-color: yellow; /* Background color for projects */
-            padding: 20px; /* Padding inside each project box */
-            text-align: center; /* Center text */
-            border-radius: 5px; /* Rounded corners */
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px; /* Reduce padding on smaller screens */
-            }
-            h1 {
-                font-size: 24px; /* Smaller font size for the main heading */
-            }
-            h2 {
-                font-size: 20px; /* Smaller font size for subheadings */
-            }
-            p, ul, ol {
-                font-size: 16px; /* Smaller font size for text */
-            }
-        }
-    </style>
+    <title>Gerald Blackwell Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#favorites">Favorite Websites</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
-    
     <header>
-    <h1>Welcome to My Personal Website</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-    
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>My name is Gerald Blackwell, and I am learning web development. I enjoy coding and creating new things.</p>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of the projects I have worked on:</p>
-            <p>Project 1: A personal portfolio website.</p>
-            <p>Project 2: A simple to-do list application.</p>
-        </section>
-        
-        <section id="favorites">
-            <h2>Favorite Websites</h2>
-            <p>Here are some of my favorite websites:</p>
-            <ul>
-                <li><a href="https://www.steelers.com/" target="_blank">NFL</a></li>
-                <li><a href="https://www.crunchyroll.com/discover" target="_blank">Crunchyroll</a></li>
-            </ul>
-        </section>
-        
-        <section id="image">
-            <h2>My Favorite Image</h2>
-            <img src="12.PNG" alt="Husky Logo">
-        </section>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you would like to get in touch, feel free to reach out!</p>
-            <form id="contactForm">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                
-                <button type="submit">Submit</button>
-            </form>
+    <main>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project One</h3>
+                <p>Description of Project One.</p>
+                <img src="placeholder-image.png" alt="Project One Image" />
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>Description of Project Two.</p>
+                <img src="placeholder-image.png" alt="Project Two Image" />
+            </div>
+
+            <table>
+                <caption>Project Overview</caption>
+                <colgroup>
+                    <col style="background-color: #f2f2f2;">
+                    <col>
+                    <col style="background-color: #f2f2f2;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project One</td>
+                        <td>A brief description of Project One.</td>
+                        <td><img src="placeholder-image.png" alt="Project One Image" /></td>
+                    </tr>
+                    <tr>
+                        <td>Project Two</td>
+                        <td>A brief description of Project Two.</td>
+                        <td><img src="placeholder-image.png" alt="Project Two Image" /></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">End of Project Overview</td>
+                    </tr>
+                </tfoot>
+            </table>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Gerald Blackwell. All rights reserved.</p>
+        <p>&copy; 2025 My Personal Website</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor click behavior
-
-                const targetId = this.getAttribute('href'); // Get the target section ID
-                const targetSection = document.querySelector(targetId); // Select the target section
-
-                // Scroll to the target section
-                targetSection.scrollIntoView({
-                    behavior: 'smooth' // Smooth scrolling effect
-                });
-            });
-        });
-
-        // Function to handle form submission
-        document.getElementById("contactForm").onsubmit = function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get form values
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            // Basic validation
-            if (name === "" || email === "" || message === "") {
-                alert("Please fill out all fields.");
-                return;
-            }
-
-            // Display an alert with the submitted information
-            alert(`Thank you, ${name}! Your message has been received.\nEmail: ${email}\nMessage: ${message}`);
-            
-            // Optionally, reset the form
-            this.reset();
-        };
-    </script>
 </body>
 </html>
