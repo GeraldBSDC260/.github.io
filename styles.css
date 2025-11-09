@@ -1,155 +1,159 @@
-/* styles.css */
-
-/* Set the background color */
+/* Reset some default styles */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    animation: fadeIn 1s; /* Apply fade-in effect to the body */
 }
 
-header, footer {
+header {
     text-align: center;
-    padding: 10px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between navigation links */
     margin-bottom: 20px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease; /* Transition for background color */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-nav a:hover {
-    background-color: #007BFF; /* Change to your desired hover color */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Default link color */
+    padding: 5px 10px; /* Add padding for better click area */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #5cb85c; /* Change background color on hover */
     color: white; /* Change text color on hover */
 }
 
 main {
     display: flex;
-    flex-direction: column; /* Stack sections vertically on mobile */
-    align-items: center; /* Center content horizontally */
-    gap: 20px; /* Space between sections */
+    flex-direction: column; /* Stack articles vertically by default */
+    align-items: center; /* Center content */
+    gap: 20px; /* Space between articles */
 }
 
-#projects {
-    width: 100%; /* Make sure it takes full width */
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width on small screens */
+    max-width: 600px; /* Limit width for readability */
 }
 
-.project {
-    margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Transition for scaling effect */
-    width: 100%; /* Make sure it takes full width */
-}
-
-.project:hover {
-    transform: scale(1.02); /* Scale effect on hover */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+section {
+    flex: 1 1 100%; /* Full width on small screens */
     margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px; /* Increased padding for better spacing */
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2; /* Header background color */
-}
-
-tbody tr:hover {
-    background-color: #f9f9f9; /* Highlight row on hover */
-}
-
-main {
-    transition: transform 0.3s ease; /* Transition for main content sections */
-}
-
-main:hover {
-    transform: scale(1.02); /* Zoom in effect on hover */
-}
-
-/* Contact Form Styles */
-#contact {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+form {
     display: flex;
     flex-direction: column; /* Stack form elements vertically */
-    gap: 15px; /* Space between form fields */
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column; /* Stack label and input vertically */
-    gap: 5px; /* Space between label and input */
 }
 
 label {
-    font-weight: bold;
+    margin: 10px 0 5px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input, textarea {
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    transition: border-color 0.3s ease; /* Transition for border color */
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for form elements */
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    outline: none;
+input:hover, input:focus, textarea:hover, textarea:focus {
+    border-color: #5cb85c; /* Change border color on hover/focus */
+    background-color: #f9f9f9; /* Change background color on hover/focus */
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #007BFF;
+    padding: 10px;
+    background-color: #5cb85c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transition for background color */
+    transition: background-color 0.3s; /* Smooth transition for button */
 }
 
 button:hover {
-    background-color: #0056b3; /* Change background color on hover */
+    background-color: #4cae4c; /* Darken button background on hover */
 }
 
-@media (max-width: 600px) {
-    #contact {
-        padding: 15px;
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* Phones: max width of 767px */
+@media (max-width: 767px) {
+    main {
+        flex-direction: column; /* Stack articles vertically */
+    }
+    
+    article {
+        width: 100%; /* Full width for articles */
     }
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+/* Tablets: min width of 768px and max width of 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
     main {
-        flex-direction: row; /* Change to row layout for tablets */
-        justify-content: space-around;
-        gap: 20px; /* Space between sections */
+        flex-direction: column; /* Stack articles vertically */
+    }
+    
+    article {
+        width: 80%; /* Slightly narrower on tablets */
     }
 }
 
-@media (min-width: 901px) {
+/* Desktops: min width of 1025px */
+@media (min-width: 1025px) {
     main {
-        flex-direction: row; /* Keep row layout for desktops */
-        justify-content: space-between;
-        gap: 20px; /* Space between sections */
+        flex-direction: row; /* Side by side on wider screens */
+        justify-content: center; /* Center articles */
+    }
+    
+    article {
+        flex: 1 1 300px; /* Allow articles to grow and shrink */
+        margin: 10px; /* Space between articles */
+    }
+    
+    section {
+        flex: 1 1 100%; /* Full width for the contact section */
+        margin-top: 20px; /* Space above contact section */
+    }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
