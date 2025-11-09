@@ -1,0 +1,29 @@
+# My Personal Blog Website
+
+## Overview
+This is a personal blog website created using HTML5, CSS3, and JavaScript. The website features a home page with blog articles, a contact form, and responsive design.
+
+## Technologies Used
+- HTML5
+- CSS3
+- Flexbox
+- GitHub Pages for deployment
+- XAMPP for local development
+
+## Features
+- Responsive layout that adapts to different screen sizes (phones, tablets, desktops).
+- Contact form with validation.
+- Smooth animations and transitions for a better user experience.
+
+## Getting Started Locally
+1. Clone the repository to your local machine.
+2. Open XAMPP Control Panel and start the Apache server.
+3. Place the project folder in the `htdocs` directory of XAMPP.
+4. Access the website by navigating to `http://localhost/your-project-folder` in your web browser.
+
+## Deployment
+This website is hosted on GitHub Pages. You can view it live at: [Your GitHub Pages URL](https://yourusername.github.io/your-repo-name)
+
+## Author
+Gerald Blackwell
+Student ID: 123456789
